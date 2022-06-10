@@ -1,0 +1,526 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #231f20;
+    text-align: left;
+    background-color: #fff;
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+    transition: all .2s;
+}
+
+/* Header */
+
+.header{
+    background-color: #fff;
+    border-bottom: 1px solid #d9d9d9;
+    transition: all .3s;
+    position: relative;
+}
+
+.header-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.header-inner:hover{
+    background-color: #F9F86C;
+    transition: all 0.5s;
+}
+
+.header-inner .header-logo{
+    height: 36px;
+}
+
+.header-inner .header-logo img{
+    width: auto;
+    height: 100%;
+}
+
+.header-inner .nav{
+    display: flex;
+}
+
+
+.nav{
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.nav li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0 30px;
+    height: 30px;
+}
+
+.nav li a{
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+    transition: all .2s;
+}
+
+.nav li>a{
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: .03em;
+    text-transform: capitalize;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.nav li>a:hover{
+    color: #8C8E8D;
+}
+
+.header-actions{
+    display: flex;
+}
+
+.header-action{
+   margin-left: 20px;
+   cursor: pointer;
+}
+
+
+
+/* Slider */
+.carousel-indicators{
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 10%;
+    margin-bottom: 1rem;
+    margin-left: 10%;
+    list-style: none;
+}
+
+.carousel-indicators [data-bs-target]{
+    width: 600px;
+    background-color: #fff !important;
+}
+
+.carousel-indicators .active{
+    background-color: #000 !important;
+}
+
+.carousel-item::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background-image: linear-gradient(transparent,rgba(0,0,0,.4666666666666667));
+    pointer-events: none;
+}
+
+.carousel-control-prev:hover .fa-circle-arrow-right,
+.carousel-control-next:hover .fa-circle-arrow-left{
+    opacity: 1;
+    background-color: transparent;
+}
+
+.fa-circle-arrow-right ,.fa-circle-arrow-left{
+    font-size: 38px;
+    cursor: pointer;
+    background-color: #000;
+    color: #ffffff;
+    padding: 8px;
+    transition: all .3s;
+    border-radius: 100%;
+    opacity: 0.7;
+}
+
+.header-menu.hide{
+    display: none;
+}
+
+
+/* products */
+
+.homepage-product{
+    position: relative;
+}
+.hometab-header{
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+    margin-bottom: 8px;
+}
+
+.hometab-item{
+    position: relative;
+    width: 150px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: #8e8e8e;
+    letter-spacing: .03em;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    border-bottom: 1px solid #8e8e8e;
+    cursor: pointer;
+}
+
+.hometab-item.is-active{
+    position: relative;
+    width: 150px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: #8e8e8e;
+    letter-spacing: .03em;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+    border-bottom: 3px solid #000;
+    font-weight: 600;
+    transition: ease 0.3s;
+}
+
+.tab-grid{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tab-grid-column{
+    width: 20%;
+    border-radius: 5px;
+}
+
+.product-thumbnail img{
+    background-size: covẻ;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.color-option
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.color-option-item    
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.color-option-item.is-current{
+    border: 1px solid #000;
+    border-radius: 16px;
+}
+
+.color-option .color-option-item .checkmark{
+    display: block;
+    width: 35px;
+    height: 20px;
+    border-radius: 16px;
+}
+
+.product-title{
+    margin-top: 10px;
+}
+
+.product-title a{
+    font-size: 14px;
+    line-height: 1.2em;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.product-price{
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: row-reverse;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.product-hint{
+    display: inline-flex;
+    flex-flow: column;
+}
+
+.product-hint .hint-box{
+    display: inline-block;
+    border: 1px solid #2f5acf;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 4px 14px;
+}
+
+.product-hint .hint-box .hint-text{
+    color: #2f5acf;
+}
+
+
+
+/* Card */
+
+.card{
+    background-color: #006CBC;
+    margin: 0 64px;
+    border-radius: 50px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    border: none;
+}
+
+.card-content{
+    padding-top: 60px;
+    padding-left: 40px;
+    padding-bottom: 180px;
+}
+
+.card-content .card-heading{
+    font-size: 4em;
+    max-width: 80%;
+}
+
+.card-content .card-description{
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+.card .card-imagie{
+    width: 70%;
+    background-image: url("https://mcdn.coolmate.me/uploads/January2022/ao_(1)_1_(1)_(1).jpg");
+    background-size: cover;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.card .card-button{
+    margin-top: 80px;
+}
+
+.card .card-button a{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #fff;
+    padding: 10px 25px;
+    border-radius: 20px;
+}
+
+#DENIM .card{
+    background-image: url(https://mcdn.coolmate.me/image/April2022/mceclip1_68.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 15px;
+
+}
+
+#DENIM .card .card-imagie{
+    width: 70%;
+    background-image: url("https://mcdn.coolmate.me/image/April2022/mceclip2_11.jpg");
+    background-size: cover;
+    border-radius: 50px;
+}
+
+#coolclub{
+    margin: 0 64px;
+}
+
+.coolclub-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.wrapper-content{
+    display: flex;
+}
+
+.coolclub-content h2{
+    font-size: 96px;
+}
+
+.coolclub-box{
+    width: 256px;
+    height: 348px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#coollub .coollub-about-btn{
+    background-color: #f9f86c;
+    color: #000;
+    border: 2px solid #f9f86c;
+    padding: 10px 25px;
+    border-radius: 16px;
+}
+
+#coolclub .coolclub-about-btn:hover{
+    background-color: #8e8e8e;
+    border: 2px solid #8e8e8e;
+    transition: all ease 0.3s;
+}
+
+#coolClub .coolclub-about-btn a:hover{
+    color: #000;
+}
+
+#footer{
+    background-color: #000;
+    color: #fff;
+    padding: 30px 0;
+    font-size: 13px;
+    line-height: 160%;
+    color: #d9d9d9;
+    margin-top: 30px;
+}
+
+.footer-container{
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+.footer-inner{
+    display: flex;
+    padding-bottom: 35px;
+}
+
+.footer-menu-site{
+    flex: 1;
+    padding-right: 130px;
+}
+
+.footer-menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-menu-item{
+    flex: 1;
+    font-size: 13px;
+    line-height: 200%;
+    color: #d9d9d9;
+    max-width: 160px;
+}
+
+.footer-menu-title{
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 200%;
+    margin-bottom: 15px;
+}
+
+.footer-menu ul{
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu ul li{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.footer-menu ul li a:hover{
+    color: #F9F86C;
+}
+
+.footer-sidebar{
+    width: 30%;
+    max-width: 275px;
+}
+
+.footer-sidebar-title{
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 27px;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.footer-description{
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 33px;
+}
+
+.footer-btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 43px;
+    background: #2f5acf;
+    border-radius: 16px;
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .03em;
+    margin-bottom: 25px;
+    border: 0;
+}
+
+.footer-btn:hover{
+    background: #fff;
+    color: #000;
+    transition: all .2s;
+}
+
+/* Responsive */
+@media (max-width: 1000px){
+
+    .headerMenu {
+        display: none;
+    }
+
+    .card .cardImagie{
+        width: 50%;
+        background-image: url("https://mcdn.coolmate.me/uploads/January2022/ao_(1)_1_(1)_(1).jpg");
+        background-size: cover;
+        border-radius: 50px;
+    }
+
+    .cardContent .cardHeading{
+        font-size: 2em;
+        max-width: 80%;
+    }
+    
+    .cardContent .cardDescription{
+        margin-top: 60px;
+        font-size: 0.6rem;
+    }
+}
+
