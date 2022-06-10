@@ -105,8 +105,6 @@ a {
    cursor: pointer;
 }
 
-
-
 /* Slider */
 .carousel-indicators{
     position: absolute;
@@ -167,7 +165,8 @@ a {
 
 /* products */
 
-.homepage-product{
+.products
+{
     position: relative;
 }
 .hometab-header{
@@ -338,7 +337,7 @@ a {
     border-radius: 20px;
 }
 
-#DENIM .card{
+#homepage-demin .card{
     background-image: url(https://mcdn.coolmate.me/image/April2022/mceclip1_68.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -347,7 +346,7 @@ a {
 
 }
 
-#DENIM .card .card-imagie{
+#homepage-demin .card .card-imagie{
     width: 70%;
     background-image: url("https://mcdn.coolmate.me/image/April2022/mceclip2_11.jpg");
     background-size: cover;
@@ -380,7 +379,7 @@ a {
     background-size: contain;
 }
 
-#coollub .coollub-about-btn{
+#coolclub .coolclub-about-btn{
     background-color: #f9f86c;
     color: #000;
     border: 2px solid #f9f86c;
@@ -392,11 +391,15 @@ a {
     background-color: #8e8e8e;
     border: 2px solid #8e8e8e;
     transition: all ease 0.3s;
+    cursor: pointer;
 }
 
 #coolClub .coolclub-about-btn a:hover{
     color: #000;
 }
+
+
+/* Footer */
 
 #footer{
     background-color: #000;
