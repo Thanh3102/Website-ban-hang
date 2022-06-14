@@ -3,8 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif ;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
@@ -58,30 +59,20 @@ a {
 
 .nav{
     list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+  
 }
 
-.nav li{
+.nav .nav-item{
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-    padding: 0 30px;
+    padding: 30px 30px;
     height: 30px;
 }
 
-.nav li a{
-    background-color: transparent;
-    text-decoration: none;
-    color: inherit;
-    transition: all .2s;
-}
 
-.nav li>a{
+.nav .nav-item>a{
     font-weight: 700;
     font-size: 13px;
     line-height: 16px;
@@ -92,9 +83,92 @@ a {
     white-space: nowrap;
 }
 
-.nav li>a:hover{
+.nav>li>a:hover{
     color: #8C8E8D;
 }
+
+.mega-menu-container
+{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    transition: all .2s;
+    z-index: 10;
+    background-color: #fff;
+    display: none;
+}
+
+
+.mega-menu-inner{
+    display: flex;
+    margin: 10px 240px;
+    height: 100%;
+}
+
+.mega-menu-title{
+    display: block;
+    color: #8e8e8e;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.mega-menu-item{
+    flex: 1;
+    padding: 0 15px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 200%;
+    letter-spacing: .03em;
+    color: #000;
+}
+
+.mega-menu-item ul{
+    padding: 0;
+    margin: 0;
+}
+
+.mega-menu-item ul li{
+    list-style: none;
+    margin: 0;
+}
+
+.mega-menu-item ul li a{
+    font-weight: bold;
+}
+
+.mega-menu-item ul li span{
+    display: block;
+    font-size: 80%;
+    margin-top: -4%;
+    font-weight: 600;
+    width: 100%;
+}
+
+.nav .mega-menu:hover .mega-menu-container{
+    display: block;
+    transition: all .5s;
+}
+
+.nav .mega-menu:hover body{
+    opacity: 0.5;
+}
+
+.menu-row{
+    display: flex;
+    min-width: 300px;
+}
+
+
+.menu-column{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 
 .header-actions{
     display: flex;
@@ -107,18 +181,9 @@ a {
 
 /* Slider */
 .carousel-indicators{
-    position: absolute;
     right: 0;
     top: 0;
     left: 0;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin-right: 10%;
-    margin-bottom: 1rem;
-    margin-left: 10%;
-    list-style: none;
 }
 
 .carousel-indicators [data-bs-target]{
@@ -205,18 +270,8 @@ a {
     transition: ease 0.3s;
 }
 
-.tab-grid{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.tab-grid-column{
-    width: 20%;
-    border-radius: 5px;
-}
 
 .product-thumbnail img{
-    background-size: covẻ;
     width: 100%;
     height: auto;
     border-radius: 15px;
@@ -289,69 +344,84 @@ a {
 
 
 
-/* Card */
-
-.card{
-    background-color: #006CBC;
+/* Excool Card */
+.card-container{
     margin: 0 64px;
+}
+
+#homepage-excool .card-content{
+    position: relative;
+    display: flex;
     border-radius: 50px;
+    background-color: #006CBC;
+}
+
+#homepage-excool .card-info{
+    padding: 60px;
+    width: 50%;
     color: #fff;
     display: flex;
-    flex-direction: row;
-    border: none;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.card-content{
-    padding-top: 60px;
-    padding-left: 40px;
-    padding-bottom: 180px;
-}
-
-.card-content .card-heading{
+.card-info .card-title{
     font-size: 4em;
-    max-width: 80%;
 }
 
-.card-content .card-description{
-    margin-top: 60px;
-    font-size: 0.9rem;
+.card-info .card-description{
+    font-weight: 500;
 }
 
-.card .card-imagie{
-    width: 70%;
-    background-image: url("https://mcdn.coolmate.me/uploads/January2022/ao_(1)_1_(1)_(1).jpg");
-    background-size: cover;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-}
-
-.card .card-button{
-    margin-top: 80px;
-}
-
-.card .card-button a{
-    background-color: #fff;
+.card-info .card-about-btn a{
     color: #000;
-    border: 2px solid #fff;
-    padding: 10px 25px;
-    border-radius: 20px;
+    background-color: #fff;
+    padding: 10px 30px;
+    border-radius: 16px;
 }
 
-#homepage-demin .card{
-    background-image: url(https://mcdn.coolmate.me/image/April2022/mceclip1_68.jpg);
+#homepage-excool .card-image{
+    width: 50%;
+    height: 550px;
+    background-color: #fff;
+    border-radius: 50px;
+    background-image: url('/img/ao_\(1\)_1_\(1\)_\(1\).jpg');
+    background-size: cover;
+}
+
+
+/* Demin card */
+
+#homepage-demin .card-content{
+    display: flex;
+    border-radius: 50px;
+    background-image: url('/img/mceclip1_68.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 60px;
+}
+
+#homepage-demin .card-info{
+    padding-left: 60px;
+    width: 50%;
     color: #fff;
-    padding: 15px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-#homepage-demin .card .card-imagie{
-    width: 70%;
-    background-image: url("https://mcdn.coolmate.me/image/April2022/mceclip2_11.jpg");
-    background-size: cover;
+#homepage-demin .card-image{
+    width: 50%;
+    height: 500px;
+    background-color: #fff;
     border-radius: 50px;
+    background-image: url('/img/mceclip2_11.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+
+/* Coolclub Section */
 
 #coolclub{
     margin: 0 64px;
@@ -368,7 +438,7 @@ a {
     display: flex;
 }
 
-.coolclub-content h2{
+.coolclub-content .coolclub-heading{
     font-size: 96px;
 }
 
@@ -376,7 +446,7 @@ a {
     width: 256px;
     height: 348px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 #coolclub .coolclub-about-btn{
@@ -394,8 +464,32 @@ a {
     cursor: pointer;
 }
 
-#coolClub .coolclub-about-btn a:hover{
+#coolclub .coolclub-about-btn a:hover{
     color: #000;
+}
+
+
+/* Homepage-more */
+
+#homepage-more{
+    margin-top: 60px;
+}
+
+#homepage-more .card-container{
+    margin: 0 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#homepage-more .card-container .card-thumbnail{
+    width: 98%;
+}
+
+#homepage-more .card-container .card-thumbnail img{
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
 }
 
 
@@ -502,28 +596,152 @@ a {
     transition: all .2s;
 }
 
-/* Responsive */
-@media (max-width: 1000px){
 
-    .headerMenu {
+
+/* Responsive */
+@media only screen and (max-width: 1280px){
+    .mega-menu-inner{
+        margin: 0 48px;
+    }
+}
+
+
+@media only screen and (max-width: 1080px) and (min-width: 861px){
+    body{
+        overflow-x: hidden;
+    }
+    /* Header */
+    .nav .nav-item{
+        padding: 20px 10px;
+    }
+
+    /* Product */
+    .product-wrapper .container{
+        max-width: 780px;
+    }
+
+    /* Excool card */
+
+    .card-container{
+        margin: 0 32px;
+    }
+
+    .card-info{
+        padding: 60px;
+    }
+
+    .card-info .card-title{
+        font-size: 2.5em;
+    }
+
+    #homepage-excool .card-image{
+        height: 350px;
+    }
+
+    /* Demin card */
+
+    #homepage-demin .card-image{
+        height: 350px;
+    }
+
+    .card-description p{
+        font-size: 1em;
+    }
+
+    /* Coolclub Section */
+    .coolclub-content .coolclub-heading{
+        font-size: 48px;
+    }
+
+    .coolclub-box{
+        width: 179.2px;
+        height: 243.6px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* Homepage more */
+    #homepage-more .card-container{
+        margin: 0 32px;
+    } 
+
+    /* footer */
+
+    footer{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 860px){
+    .header-menu{
         display: none;
     }
 
-    .card .cardImagie{
-        width: 50%;
-        background-image: url("https://mcdn.coolmate.me/uploads/January2022/ao_(1)_1_(1)_(1).jpg");
-        background-size: cover;
-        border-radius: 50px;
+    /* Product */
+    .product-wrapper .container{
+        max-width: 640px;
+    }    
+    
+    /* Excool card */
+
+    .card-info .card-about-btn a{
+        color: #000;
+        background-color: #fff;
+        padding: 6px 20px;
+        border-radius: 16px;
+        font-size: 10px;
     }
 
-    .cardContent .cardHeading{
-        font-size: 2em;
-        max-width: 80%;
+    .card-container{
+        margin: 0 16px;
     }
+
+    .card-info{
+        padding: 30px;
+    }
+
+    .card-info .card-title{
+        font-size: 2em;
+    }
+
+    #homepage-excool .card-image{
+        height: 280px;
+    }
+
+    /* Demin card */
+
+    #homepage-demin .card-image{
+        height: 240px;
+    }
+
+    .card-description p{
+        font-size: 0.8em;
+    }
+
+    /* Coolclub Section */
+    .coolclub-content .coolclub-heading{
+        font-size: 48px;
+    }
+
+    .coolclub-box{
+        width: 153.6px;
+        height: 243.6px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #homepage-demin .card-content{
+        padding: 30px;
+    }
+
     
-    .cardContent .cardDescription{
-        margin-top: 60px;
-        font-size: 0.6rem;
+    /* Homepage more */
+    #homepage-more .card-container{
+        margin: 0 16px;
+    } 
+
+    footer{
+        display: none;
     }
 }
 
