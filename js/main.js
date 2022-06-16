@@ -1,18 +1,32 @@
 // Search Open
 var headerMenu = $('.header-menu');
+var headerLogo = $('.header-logo')
+var headerAction = $('.header-actions')
 var headerSearch = $('.header-action.header-search img')
+var searchBoxIcon = $('.header-search-box img')
+var searchBox = $('.header-search-box')
 var isMenuOpen = false
 headerSearch.click(function(){
 
     if (isMenuOpen == false){
-        headerMenu.addClass('hide');
+        headerMenu.css('display','none')
+        headerLogo.css('display','none')
+        headerAction.css('display','none')
+        searchBox.css('display','block');
         isMenuOpen = true;
-    }
-    else{
-        headerMenu.removeClass('hide');
-        isMenuOpen = false;
+        console.log(searchBoxIcon);
     }
 });
+
+searchBoxIcon.click(function(){
+    headerMenu.css('display','block')
+    headerLogo.css('display','block')
+    headerAction.css('display','flex')
+    searchBox.css('display','none');
+    isMenuOpen = false;
+})
+
+
 
 
 

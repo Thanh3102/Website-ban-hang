@@ -52,10 +52,19 @@ a {
     height: 100%;
 }
 
+.header-search-box .search-input{
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+    height: 50px;
+    outline: none;
+    padding: 10px;
+    width: 300px;
+}
+
 .header-inner .nav{
     display: flex;
 }
-
 
 .nav{
     list-style-type: disc;
@@ -223,10 +232,6 @@ a {
     opacity: 0.7;
 }
 
-.header-menu.hide{
-    display: none;
-}
-
 
 /* products */
 
@@ -385,7 +390,7 @@ a {
     height: 550px;
     background-color: #fff;
     border-radius: 50px;
-    background-image: url('/img/ao_\(1\)_1_\(1\)_\(1\).jpg');
+    background-image: url('/img/Homepage/ao_\(1\)_1_\(1\)_\(1\).jpg');
     background-size: cover;
 }
 
@@ -395,7 +400,7 @@ a {
 #homepage-demin .card-content{
     display: flex;
     border-radius: 50px;
-    background-image: url('/img/mceclip1_68.jpg');
+    background-image: url('/img/Homepage/mceclip1_68.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 60px;
@@ -415,7 +420,7 @@ a {
     height: 500px;
     background-color: #fff;
     border-radius: 50px;
-    background-image: url('/img/mceclip2_11.jpg');
+    background-image: url('/img/Homepage/mceclip2_11.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
