@@ -1,69 +1,130 @@
-// Search Open
+// Mở thanh tìm kiếm
 var headerMenu = $('.header-menu');
 var headerLogo = $('.header-logo')
 var headerAction = $('.header-actions')
 var headerSearch = $('.header-action.header-search img')
 var searchBoxIcon = $('.header-search-box img')
 var searchBox = $('.header-search-box')
-var isMenuOpen = false
+var dashboardBTN = $('.dashboard-btn')
 headerSearch.click(function(){
-
-    if (isMenuOpen == false){
-        headerMenu.css('display','none')
-        headerLogo.css('display','none')
-        headerAction.css('display','none')
-        searchBox.css('display','block');
-        isMenuOpen = true;
-        console.log(searchBoxIcon);
-    }
+        headerMenu.hide();
+        headerLogo.hide();
+        headerAction.hide();
+        searchBox.show();
+        $('.header-inner').css('flex-direction','column')
 });
 
 searchBoxIcon.click(function(){
-    headerMenu.css('display','block')
-    headerLogo.css('display','block')
-    headerAction.css('display','flex')
-    searchBox.css('display','none');
-    isMenuOpen = false;
+    headerMenu.show();
+    headerLogo.show();
+    headerAction.show();
+    searchBox.hide();
+    $('.header-inner').css('flex-direction','row')
+})
+
+dashboardBTN.click(function(){
+    if ($('#dashboard').css('display') == 'none'){
+        $('#dashboard').show();
+        $('.dashboard-btn i').removeClass('fa-align-justify')
+        $('.dashboard-btn i').addClass('fa-x')
+    }
+    else{
+        $('#dashboard').hide();
+        $('.dashboard-btn i').removeClass('fa-x')
+        $('.dashboard-btn i').addClass('fa-align-justify')
+    }
 })
 
 
 
 
+// Thay đổi home tab
 
-// HomeTab
-var homeTabItem1 = $('.hometab-item.Item1')
-var homeTabItem2 = $('.hometab-item.Item2')
-var homeTabItem3 = $('.hometab-item.Item3')
+var homeTabItem = $('[data-tab-name]')
+var productContainer = $('.product-wrapper .container')
 
-homeTabItem1.click(function(){
-    if (homeTabItem1.hasClass('is-active')){
-        return;
+var homeTabChange = function(name) {
+    for(let i=0; i<homeTabItem.length; i++){
+        if ($(homeTabItem[i]).data("tab-name") == name){
+            if ($(homeTabItem[i]).hasClass('is-active')){
+                return;
+            }
+            else{
+                $(homeTabItem[i]).addClass('is-active');
+            }
+        }
+        else{
+            if ($(homeTabItem[i]).hasClass('is-active')){
+                $(homeTabItem[i]).removeClass('is-active');
+            }
+        }
     }
-    else{
-        homeTabItem2.removeClass('is-active');
-        homeTabItem3.removeClass('is-active');
-        homeTabItem1.addClass('is-active');
+}
+
+var openHomeTabContainer = function(name){
+    for(let i=0; i<productContainer.length; i++){
+        if ($(productContainer[i]).data("tab-name") == name){
+            $(productContainer[i]).show();
+        }
+        else{
+            $(productContainer[i]).hide();
+        }
     }
+}
+
+
+homeTabItem.each(function(index) {
+    $(homeTabItem[index]).click(function() {
+        homeTabChange($(homeTabItem[index]).data("tab-name"));
+        openHomeTabContainer($(homeTabItem[index]).data("tab-name"))
+    })
 })
 
-homeTabItem2.click(function(){
-    if (homeTabItem2.hasClass('is-active')){
-        return;
+
+// Thay đổi nav tab
+var navTabList = $('.nav-tab-title')
+var navTabItemList = $('.nav-tab-content')
+
+var openNavTab = function(tabname){
+    navTabItemList.each(function(index){
+        if ($(navTabItemList[index]).data('navtab-name') == tabname){
+            $(navTabItemList[index]).show();
+        }
+        else{
+            $(navTabItemList[index]).hide();
+        }
+
+    })
+}
+
+var navTabChange = function(tabname){
+    for (let i = 0; i<navTabList.length ; i++){
+        if ($(navTabList[i]).data('navtab-name') == tabname){
+            if ($(navTabList[i]).hasClass('is-current')){
+                return;
+            }
+            else(
+                $(navTabList[i]).addClass('is-current')
+            )
+            openNavTab($(navTabList[i]).data('navtab-name'))
+        }
+        else{
+            $(navTabList[i]).removeClass('is-current')
+        }
     }
-    else{
-        homeTabItem1.removeClass('is-active');
-        homeTabItem3.removeClass('is-active');
-        homeTabItem2.addClass('is-active');
-    }
+}
+
+navTabList.each(function(index){
+    $(navTabList[index]).click(function(){
+        navTabChange($(navTabList[index]).data('navtab-name'))
+    })
 })
 
-homeTabItem3.click(function(){
-    if (homeTabItem3.hasClass('is-active')){
-        return;
-    }
-    else{
-        homeTabItem1.removeClass('is-active');
-        homeTabItem2.removeClass('is-active');
-        homeTabItem3.addClass('is-active');
+
+$(window).resize(function(){
+    if($(window).width() > 1080){
+        $('#dashboard').hide()
+        $('.dashboard-btn i').removeClass('fa-x')
+        $('.dashboard-btn i').addClass('fa-align-justify')
     }
 })

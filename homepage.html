@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CoolMate - Giải pháp mua sắm cả tủ đồ cho nam giới - Cool Mate</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/homepage.css">
@@ -13,9 +13,11 @@
     <div id="homepage">
         <header class="header">
             <div class="header-inner">
+                <div class="dashboard-btn">
+                    <i class="fa-solid fa-align-justify"></i>
+                </div>
                 <div class="header-logo">
                     <a href=""><img src="https://www.coolmate.me/images/logo-coolmate.svg" alt=""></a>
-                    
                 </div>
                 <div class="header-search-box"  style="display: none">
                     <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm...">
@@ -146,8 +148,6 @@
                                                     <span>Diệt 99.99% vi khuẩn SARS-CoV2</span>
                                                 </a>
                                             </li>
-                                            <li></li>
-                                            <li></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -164,7 +164,7 @@
                         <img src="https://www.coolmate.me/images/header/icon-search.svg" alt="">
                     </div>
                     <div class="header-action header-login">
-                        <a href="">
+                        <a href="./Login.html">
                             <img src="https://www.coolmate.me/images/header/icon-account.svg" alt="">
                         </a>
                     </div>
@@ -176,6 +176,147 @@
                 </div>
             </div>
         </header>
+
+        <div id="dashboard">
+            <div class="search-box">
+                <form action="">
+                    <img src="https://www.coolmate.me/images/header/icon-search.svg" alt="">
+                    <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm...">
+                </form>
+            </div>
+            <div class="nav-tab">
+                <div class="nav-tab-head">
+                    <a href="#" class="nav-tab-title is-current" data-navtab-name = "san-pham">Sản phẩm</a>
+                    <a href="#" class="nav-tab-title" data-navtab-name = "bo-suu-tap">Bộ sưu tập</a>
+                    <a href="#" class="nav-tab-title" data-navtab-name = "nhu-cau">Nhu cầu</a>
+                    <a href="#  " class="nav-tab-title" data-navtab-name = "cong-nghe">Công nghệ</a>
+                </div>
+                <div class="nav-tab-content" data-navtab-name = "san-pham">
+                    <div class="nav-tab-label">
+                        <a href="">Tất cả sản phẩm</a>
+                    </div>
+                    <hr style="width: 100px; margin: 0;">
+                    <ul style="padding-top: 10px;">
+                        <li><a href=""><b>Áo nam</b></a></li>
+                        <li><a href="">Tất cả áo nam</a></li>
+                        <li><a href="">Áo Tank Top</a></li>
+                        <li><a href="">Áo T-shirt</a></li>
+                        <li><a href="">Áo polo</a></li>
+                        <li><a href="">Áo Sơ Mi</a></li>
+                        <li><a href="">Áo Thể Thao</a></li>
+                        <li><a href="">Áo In Hình</a></li>
+                        <li><a href="">Áo khoác thể thao</a></li>
+                    </ul>
+
+                    <ul style="padding-top: 10px;">
+                        <li><a href=""><b>Quần Nam</b></a></li>
+                        <li><a href="">Tất cả quần nam</a></li>
+                        <li><a href="">Quần Shorts</a></li>
+                        <li><a href="">Quần Jeans</a></li>
+                        <li><a href="">Quần Dài</a></li>
+                    </ul>
+
+                    <ul style="padding-top: 10px;">
+                        <li><a href=""><b>Phụ kiện</b></a></li>
+                        <li><a href="">Tất cả phụ kiện</a></li>
+                        <li><a href="">Tất (Vớ)</a></li>
+                        <li><a href="">Phụ kiện</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="nav-tab-content" data-navtab-name = "bo-suu-tap" style="display: none;">
+                    <div class="mega-menu-item">
+                        <ul>
+                            <li>
+                                <a href="">Clean Vietnam
+                                    <span>Sự kết hợp giữa Coolmate & Vietmax</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">Coolmate Basics
+                                    <span>BST giá rẻ - chất lượng</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">Care & Share
+                                    <span>10% doanh thu dành cho các bé</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">Coolmate x Đồ chơi chữ
+                                    <span>Chiếc áo hai mặt</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">Coolmate x Long Thổ
+                                    <span>Sự kết hợp về đồ thể thao</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="nav-tab-content" data-navtab-name = "nhu-cau" style="display: none;">
+                    <div class="mega-menu-item">
+                        <ul>
+                            <li>
+                                <a href="">Mặc nhà & Mặc trong
+                                <span>Homewear & Underwear</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">Mặc hằng ngày
+                                    <span>Casualwear</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">Đồ thể thao
+                                    <span>Activewear</span>
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="">Phụ kiện
+                                    <span>Accessories</span>
+                                    </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="nav-tab-content" data-navtab-name = "cong-nghe" style="display: none;">
+                    <div class="mega-menu-item">
+                        <ul>
+                            <li>
+                                <a href="">Excool
+                                    <span>Công nghệ làm mát tối đa</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">Cleandye
+                                    <span>Nhuộm không dùng nước</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">HeiQ Viroblock
+                                    <span>Diệt 99.99% vi khuẩn SARS-CoV2</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <ul class="nav">
+                    <li class="nav-item"><a href="" style="color: red;">Outlet</a></li>
+                    <li class="nav-item"><a href="">Coolxprint</a></li>
+                    <li class="nav-item"><a href="">In áo công ty</a></li>
+                    <li class="nav-item"><a href="">Về coolmate</a></li>
+                    <li class="nav-item"><a href="">Chọn size</a></li>
+                    <li class="nav-item"><a href="">Blog</a></li>
+                </ul>
+            </div>
+        </div>
 
         <!-- Slider -->
         <div id="carousel" class="carousel carousel-dark slide" data-bs-ride="false">
@@ -203,8 +344,6 @@
             </button>
         </div>
 
-
-
         <!-- Homepage Product -->
         <section id="homepage-product">
             <div class="products">
@@ -213,12 +352,12 @@
                 </h2>
                 <div class="hometab">
                     <div class="hometab-header">
-                        <h4 class="hometab-item Item1 is-active">Mặc hằng ngày</h4>
-                        <h4 class="hometab-item Item2">Mặc thể thao</h4>
-                        <h4 class="hometab-item Item3">Đồ lót nam</h4>
+                        <h4 class="hometab-item is-active" data-tab-name = "mac-hang-ngay">Mặc hằng ngày</h4>
+                        <h4 class="hometab-item" data-tab-name = "mac-the-thao">Mặc thể thao</h4>
+                        <h4 class="hometab-item" data-tab-name = "do-lot-nam">Đồ lót nam</h4>
                     </div>
                 <div class="product-wrapper">
-                    <div class="container product-tab1">
+                    <div class="container" data-tab-name="mac-hang-ngay"> 
                         <div class="row">
                             <div class="col-xl-3 col-md-6 col-6">
                                 <div class="product">
@@ -356,7 +495,252 @@
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </div>
+
+                    <div class="container" data-tab-name="mac-the-thao" style="display: none;"> 
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6 col-6">
+                                <div class="product">
+                                    <div class="product-thumbnail">
+                                        <a href="">
+                                            <img src="./img/Homepage/uvspport.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-option">
+                                            <div class="color-option">
+                                                <div class="color-option-item is-current">
+                                                    <span class="checkmark" style="background-color: #8e8e8e;"></span>
+                                                </div>
+                                                <div class="color-option-item">
+                                                    <span class="checkmark" style="background-color: #000;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-title">
+                                            <a href="">Áo khoác gió thể thao đa năng cản gió và chống UV</a>
+                                        </div>
+                                        <div class="product-price">
+                                            <p>399.000đ<p>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-6">
+                                <div class="product">
+                                    <div class="product-thumbnail">
+                                        <a href="">
+                                            <img src="./img/Homepage/polocleandyeden_26.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-option">
+                                            <div class="color-option">
+                                                <div class="color-option-item is-current">
+                                                    <span class="checkmark" style="background-color: #000;"></span>
+                                                </div>
+                                                <div class="color-option-item">
+                                                    <span class="checkmark" style="background-color: #3E5678;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-title">
+                                            <a href="">Áo Polo nam thể thao thoáng khí, nhuộm sạch Cleandye</a>
+                                        </div>
+                                        <div class="product-price">
+                                            <p>289.000đ<p>
+                                        </div>
+                                        <span class="product-hint">
+                                            <div class="hint-box">
+                                                <span class="hint-text">Nhập CLEANDYE tặng 01 Quần ngủ Excool khi mua 2 áo</span>
+                                            </div>
+                                        </span>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-6">
+                                <div class="product">
+                                    <div class="product-thumbnail">
+                                        <a href="">
+                                            <img src="./img/Homepage/graphene_thumb.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-option">
+                                            <div class="color-option">
+                                                <div class="color-option-item is-current">
+                                                    <span class="checkmark" style="background-color: #000;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-title">
+                                            <a href="">Quần Jogger thể thao co giãn Graphene</a>
+                                        </div>
+                                        <div class="product-price">
+                                            <p>339.000đ<p>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-6">
+                                <div class="product">
+                                    <div class="product-thumbnail">
+                                        <a href="">
+                                            <img src="./img/Homepage/DSC04215-copy.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-option">
+                                            <div class="color-option">
+                                                <div class="color-option-item is-current">
+                                                    <span class="checkmark" style="background-color: #8e8e8e;"></span>
+                                                </div>
+                                                <div class="color-option-item">
+                                                    <span class="checkmark" style="background-color: #8f8d8e;"></span>
+                                                </div>
+                                                <div class="color-option-item">
+                                                    <span class="checkmark" style="background-color: #000;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-title">
+                                            <a href="">Quần short nam thể thao Recycle 5" thoáng khí</a>
+                                        </div>
+                                        <div class="product-price">
+                                            <p>149.000đ<p>
+                                        </div>
+                                        <span class="product-hint">
+                                            <div class="hint-box">
+                                                <span class="hint-text">Mua 2 chỉ còn 129k/chiếc</span>
+                                            </div>
+                                        </span>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="container" data-tab-name="do-lot-nam" style="display: none;"> 
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6 col-6">
+                                <div class="product">
+                                    <div class="product-thumbnail">
+                                        <a href="">
+                                            <img src="./img/Homepage/Group_565.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-option">
+                                            <div class="color-option">
+                                                <div class="color-option-item is-current">
+                                                    <span class="checkmark" style="background-color: #8e8e8e;"></span>
+                                                </div>
+                                                <div class="color-option-item">
+                                                    <span class="checkmark" style="background-color: #000;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-title">
+                                            <a href="">Dịch vụ giao đồ lót định kỳ - CoolSub (3 sản phẩm/1 lần giao)</a>
+                                        </div>
+                                        <div class="product-price">
+                                            <p>199.000đ<p>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-6">
+                                <div class="product">
+                                    <div class="product-thumbnail">
+                                        <a href="">
+                                            <img src="./img/Homepage/modalmix1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-option">
+                                            <div class="color-option">
+                                                <div class="color-option-item is-current">
+                                                    <span class="checkmark" style="background-color: #000;"></span>
+                                                </div>
+                                                <div class="color-option-item">
+                                                    <span class="checkmark" style="background-color: #3E5678;"></span>
+                                                </div>
+                                                <div class="color-option-item">
+                                                    <span class="checkmark" style="background-color: #085579;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-title">
+                                            <a href="">Combo 3 Quần lót Trunk vải Cotton Modal đen cạp mới</a>
+                                        </div>
+                                        <div class="product-price">
+                                            <p>299.000đ<p>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-6">
+                                <div class="product">
+                                    <div class="product-thumbnail">
+                                        <a href="">
+                                            <img src="./img/Homepage/combo_2_den.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-option">
+                                            <div class="color-option">
+                                                <div class="color-option-item is-current">
+                                                    <span class="checkmark" style="background-color: #000;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-title">
+                                            <a href="">Combo 02 quần lót nam Trunk Microfiber Excool+ thoáng khí</a>
+                                        </div>
+                                        <div class="product-price">
+                                            <p>199.000đ<p>
+                                        </div>
+                                        <span class="product-hint">
+                                            <div class="hint-box">
+                                                <span class="hint-text">Sản phẩm mới, giá dùng thử</span>
+                                            </div>
+                                        </span>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-6">
+                                <div class="product">
+                                    <div class="product-thumbnail">
+                                        <a href="">
+                                            <img src="./img/Homepage/DSC06279_copy.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-option">
+                                            <div class="color-option">
+                                                <div class="color-option-item is-current">
+                                                    <span class="checkmark" style="background-color: #8e8e8e;"></span>
+                                                </div>
+                                                <div class="color-option-item">
+                                                    <span class="checkmark" style="background-color: #8f8d8e;"></span>
+                                                </div>
+                                                <div class="color-option-item">
+                                                    <span class="checkmark" style="background-color: #000;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-title">
+                                            <a href="">Combo 3 Quần lót Trunk vải Cotton Modal đen cạp mới</a>
+                                        </div>
+                                        <div class="product-price">
+                                            <p>299.000đ<p>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
                 </div>
             </div>
         </section>
