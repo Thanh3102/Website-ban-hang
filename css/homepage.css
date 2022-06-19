@@ -589,6 +589,69 @@ a{
 }
 
 
+/* Homepage collections */
+
+.collection-container{
+    padding: 0 64px;
+}
+
+.collection-inner{
+    display: flex;
+    position: relative;
+}
+
+.collection-item{
+    /* width: 25%; */
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+}
+
+.collection-item a{
+    display: block;
+    position: relative;
+}
+
+.collection-thumbnail{
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 450px;
+}
+
+.collection-thumbnail img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s;
+}
+
+.collection-thumbnail img:hover{
+    transform: scale(1.2);
+}
+
+.collection-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 32px);
+    transform: translate3d(-50%,-50%,0);
+    border: 2px solid #fff;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 16px;
+    transition: all .3s;
+}
+
+
+
 /* Homepage-more */
 
 #homepage-more{
@@ -775,6 +838,10 @@ a{
         font-size: 1em;
     }
 
+    .collection-container{
+        padding: 0 32px;
+    }
+
     /* Coolclub Section */
     .coolclub-content .coolclub-heading{
         font-size: 48px;
@@ -849,6 +916,10 @@ a{
 
     .card-description p{
         font-size: 0.8em;
+    }
+
+    .collection-container{
+        padding: 0 16px;
     }
 
     /* Coolclub Section */
