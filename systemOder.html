@@ -124,7 +124,7 @@
 
             <div class="header-bottom">
                 <ul class="header-bottom-right-links">
-                    <li class="header-bottom-right-icon"><a class="header-bottom-right-a" href=""><i class="fa-solid fa-eye"></i> Tổng quan</a></li>
+                    <li class="header-bottom-right-icon"><a class="header-bottom-right-a" href="./adminPage.html"><i class="fa-solid fa-eye"></i> Tổng quan</a></li>
                     <li class="header-bottom-right-icon"><a class="header-bottom-right-a" href=""><i class="fa-solid fa-cube"></i> Hàng hóa</a>
                         <div class="header-bottom-right-icon-cube">
                             <table class="table-header">
@@ -148,7 +148,7 @@
                             <table class="table-header">
                                 <tr class="table-tr-header">
                                     <td><i class="fa-solid fa-inbox"></i></td>
-                                    <td><a href="./systemOder.html"> Đặt hàng</a></td>
+                                    <td><a href=""> Đặt hàng</a></td>
                                 </tr>
                                 <tr class="table-tr-header">
                                     <td><i class="fa-solid fa-file-invoice-dollar"></i></td>
@@ -267,273 +267,173 @@
                 </ul>
             </div>
         </div>
-
         <div class="container">
-            <div class="container-left">
-
-                <div class="container-left-content">
-                    <div class="container-left-title"><b>Kết quả bán hàng hôm nay</b></div>
-                    <ul class="container-left-parameter">
-                        <li>
-                            <label for="" ><i class="fa-solid fa-circle-dollar-to-slot" style="color: blue;"></i></label><br><br>
-                            <label for="">0 Hóa đơn</label><br><br>
-                            <span style="color: blue; font-size: 20px;">0</span><br><br>
-                            <span>Doanh thu</span>
-                        </li>
-                        <hr>
-                        <li>
-                            <label for=""><i class="fa-solid fa-circle-arrow-up" style="color: #FF8030;"></i></label><br><br>
-                            <label for="">0 Phiếu</label><br><br>
-                            <span style="color: #FF8030; font-size: 20px;">0</span><br><br>
-                            <span>Trả hàng</span>
-                        </li>
-                        <hr>
-                        <li>
-                            <label for=""><i class="fa-solid fa-circle-arrow-down"  style="color:#F94F5E;"></i></label><br><br>
-                            <span style="font-size: 20px; color:#F94F5E; ">-39.07%</span><br><br><br><br>
-                            <span>So với cùng kỳ tháng trước</span>
-                        </li>
-                    </ul>
+            <div class="container-left-order">
+                <h1>Phiếu đặt hàng</h1>
+                <div class="container-left-order-time">
+                    <h3>Thời gian</h3>
+                    <div>
+                        <input type="radio"><input type="number" placeholder="Tháng này" min="1" max="12"><br>
+                        <input type="radio"><input type="datetime-local" name="" id="">
+                    </div>
                 </div>
-                
-                <div class="container-left-content-chart">
-                    <div id="chartContainer" style="height: 400px; width: 1232px;"></div>
+                <div class="container-left-status">
+                    <h3 class="left-title-status">Trạng thái</h3>
+                    <form action="#">
+                        <input type="checkbox"><label for="">Phiếu tạm</label><br>
+                        <input type="checkbox"><label for="">Đã xác nhận</label><br>
+                        <input type="checkbox"><label for="">Đang giao hàng</label><br>
+                        <input type="checkbox"><label for="">Hoàn thành</label><br>
+                        <input type="checkbox"><label for="">Đã huỷ</label>
+                    </form>
                 </div>
-
-                <div class="container-left-content-chartShirt">
-                    <div id="chartContainerShirt" style="height: 500px; width: 1232px;"></div>
+                <div class="container-left-creator">
+                    <h3>Người tạo</h3>
+                    <input type="search" placeholder="Chọn người tạo">
+                </div>
+                <div class="container-left-accepter">
+                    <h3>Người nhận đặt</h3>
+                    <input type="search" placeholder="Chọn người nhận đặt">
+                </div>
+                <div class="container-left-chanel">
+                    <h3>Kênh bán</h3>
+                    <input type="search" placeholder="Chọn kênh bán">
+                </div>
+                <div class="container-left-partner">
+                    <h3>Đối tác giao hàng</h3>
+                    <input type="search" placeholder="Chọn đối tác giao hàng">
+                </div>
+                <div class="container-left-order-timeDelivery">
+                    <h3>Thời gian giao hàng</h3>
+                    <div>
+                        <input type="radio"><input type="number" placeholder="Toàn thời gian"><br>
+                        <input type="radio"><input type="datetime-local" name="" id="">
+                    </div>
+                </div>
+                <div class="container-left-deliveryArea">
+                    <h3>Khu vực giao hàng</h3>
+                    <input type="search" placeholder="Nhập Tỉnh/TP - Quận/Huyện">
+                </div>
+                <div class="container-left-payment">
+                    <h3>Phương thức</h3>
+                    <input type="search" placeholder="Chọn phương thức thanh toán">
                 </div>
             </div>
+            <div class="container-right-order">
 
-            <div class="container-right">
-                <div class="container-right-title">
-                    <b>CÁC HOẠT ĐỘNG GẦN ĐÂY</b>
+                <div class="container-left-order-header">
+
+                    <div class="container-right-order-search">
+                        <input type="text" name="" id="inputOder" onkeyup="myFunctionFindOder();" placeholder="&#xF002; Theo mã  phiếu đặt" style="font-family:Arial, FontAwesome">
+                    </div>
+
+                    <div>
+                        <ul>
+                            <li>
+                                <button><i class="fa-solid fa-plus" style="color: white;"></i> Đặt hàng</button>
+                            </li>
+                            <li>
+                                <button><i class="fa-solid fa-copy" style="color: white;"></i> Gộp phiếu</button>
+                            </li>
+                            <li>
+                                <button><i class="fa-solid fa-file" style="color: white;"></i>File</button>
+                            </li>
+                            <li>
+                                <button><i class="fa-solid fa-grip-lines"></i></button>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
 
-                <div class="container-right-list">
-                    <ul>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
+                <div class="container-left-order-list">
 
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-solid fa-circle-up" style="color: #0090DA; font-size: 1rem;"></i>
-                                <a href="">Lê Thị Bảo Trân</a>
-                                <span>vừa</span>
-                                <a href="">bán đơn hàng</a>
-                                <span>với giá trị 
-                                    <span>14,298,000</span>
-                                </span><br>
-                                <span style="color: #bbb5b5;">2 ngày trước</span>
-                            </span>
-                        </li>
-                    </ul>
+                    <table id = "myTable">
+                        <tr>
+                            <th>Mã đặt hàng</th>
+                            <th>Thời gian</th>
+                            <th>Khách hàng</th>
+                            <th>Khách cần trả</th>
+                            <th>Khách đã trả</th>
+                            <th>Trả lại khách</th>
+                            <th>Trạng thái</th>
+                        </tr>
+
+                        <tr>
+                            <td>NU1</td>
+                            <td>01/06/2022</td>
+                            <td>Lê Thị Bảo Trân</td>
+                            <td>4300000</td>
+                            <td>5000000</td>
+                            <td>700000</td>
+                            <td>Hoàn thành</td>
+                        </tr>
+
+                        <tr>
+                            <td>NU2</td>
+                            <td>10/06/2022</td>
+                            <td>Đặng Mạnh Dũng</td>
+                            <td>2300000</td>
+                            <td>2500000</td>
+                            <td>200000</td>
+                            <td>Hoàn thành</td>
+                        </tr>
+                        <tr>
+                            <td>NU3</td>
+                            <td>15/06/2022</td>
+                            <td>Trần Văn Đạt</td>
+                            <td>4500000</td>
+                            <td>4500000</td>
+                            <td>0</td>
+                            <td>Hoàn thành</td>
+                        </tr>
+                        <tr>
+                            <td>NU4</td>
+                            <td>20/06/2022</td>
+                            <td>Trần Văn Toản</td>
+                            <td>6300000</td>
+                            <td>6500000</td>
+                            <td>200000</td>
+                            <td>Hoàn thành</td>
+                        </tr>
+                        <tr>
+                            <td>NU5</td>
+                            <td>25/06/2022</td>
+                            <td>Hà Trung Hậu</td>
+                            <td>6300000</td>
+                            <td>10000000</td>
+                            <td>3700000</td>
+                            <td>Đang giao hàng</td>
+                        </tr>
+                       
+                    </table>
+
                 </div>
+
+
             </div>
         </div>
     </div>
-    <script src="./js/style.js"></script>
+    <script>
+        function myFunctionFindOder() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("inputOder");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+                }       
+            }
+        }
+    </script>
 </body>
 </html>
+    

@@ -242,19 +242,23 @@ a{
     display: block;
 }
 
-.container-left-commodity{
+.container-left-commodity,
+.container-left-oder
+{
     max-width: 300px;
     background-color: var(--grayWhite);
 }
 
-.container-left-commodity-header{
+.container-left-commodity-header,
+.container-left-order-header{
     min-width: 1300px;
     background-color: var(--grayWhite);
     display: flex;
     justify-content: space-between;
 }
 
-.container-left-commodity h1{
+.container-left-commodity h1,
+.container-left-oder h1{
     margin-top: 20px;
     font-size: 25px;
 }
@@ -267,7 +271,17 @@ a{
 .container-left-displaySelection,
 .container-left-deadline,
 .container-left-supplier,
-.container-left-location
+.container-left-location,
+/* page systemOder */
+.container-left-order-time,
+.container-left-status,
+.container-left-creator,
+.container-left-accepter,
+.container-left-chanel,
+.container-left-partner,
+.container-left-order-timeDelivery,
+.container-left-deliveryArea,
+.container-left-payment
 {
     background-color: var(--white);
     padding: 20px;
@@ -279,7 +293,8 @@ a{
 .container-left-inventory input,
 .container-left-sellOffline input,
 .container-left-saleLink input,
-.container-left-displaySelection input{
+.container-left-displaySelection input,
+.container-left-status input{
     margin-top: 20px;
     margin-right: 10px;
 }
@@ -300,40 +315,55 @@ a{
 
 .container-left-deadline input,
 .container-left-supplier input,
-.container-left-location input{
+.container-left-location input,
+/* page systemOder */
+.container-left-order-time input,
+.container-left-order-timeDelivery input, 
+.container-left-creator input,
+.container-left-accepter input,
+.container-left-chanel input,
+.container-left-partner input,
+.container-left-deliveryArea input,
+.container-left-payment input{
     margin-top: 20px;
     margin-right: 10px;
     border-style: hidden;
     border-bottom: 1px solid blue;
 }
 
-.container-right-commodity-search{
+.container-right-commodity-search,
+.container-right-order-search {
     margin: 20px;
 }
 
-.container-right-commodity-search input{
+.container-right-commodity-search input,
+.container-right-order-search input{
     width: 300px;
     height: 30px;
     border-radius: 5px;
 }
 
-.container-right-commodity ul{
+.container-right-commodity ul,
+.container-right-order ul {
     margin-top: 20px;
     list-style-type: none;
     display: flex;
 }
 
-.container-right-commodity li{
+.container-right-commodity li,
+.container-right-order li{
     margin-right: 10px;
 }
 
-.container-right-commodity-list{
+.container-right-commodity-list,
+.container-left-order-list{
     background: var(--white);
     margin-left: 20px;
     border-radius: 5px;
 }
 
-.container-right-commodity button{
+.container-right-commodity button,
+.container-right-order button{
     background-color: rgb(20, 151, 20);
     color: var(--white);
     font-size: 20px;
@@ -391,3 +421,4 @@ a{
     font-size: 20px;
     border-radius: 5px;
 }
+
