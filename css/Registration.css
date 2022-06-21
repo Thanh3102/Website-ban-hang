@@ -3,13 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-meta{
-    display:none;
-}
+
 body{
-     /* background-color:rgb(255,245,238);
-    background-size: cover;  */
-    background-image: url('/img/bg-01.jpg');
+    background-image: url(/img/bg-01.jpg);
     width: 100%;
     min-height: 100vh;
     display: -webkit-box;
@@ -26,60 +22,46 @@ body{
     background-size: cover;
 }
 
-.login-form{
+.registration-form{
     background-color: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;;
     flex-direction: column;
-    align-items:center;
+    align-items:  center;
     border-radius: 10px;
-    padding: 40px 50px 5px;
+    padding: 50px 50px 30px;
     width: 500px;
 }
-.login-text
-{
-    text-align:  center;
-}
 
-.login-form form{
+.registration-form form{
     margin-top: 30px;
     width: 100%;
 }
-.row{
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    padding-top: 22px;
-    display:block;
-    
 
-}
-.login input{
+.registration input{
     color: #333333;
     border: none;
     border-bottom: 1px solid #333333;
     padding: 10px 0;
     padding-left: 5px;
-    width: 400px;
 }
 
-.login span{
-    font-size: 18px;
+.registration span{
+    font-size: 22px;
     padding-left: 5px;
 }
 
-.login-form form .col{
+.registration-form form .col{
     display: flex;
     flex-direction: column;
 }
 .txb1{
     font-family: Poppins-Regular;
     font-size: 14px;
+    line-height: 1.5;
+    color: #666666;
     text-align: center;
-    /* line-height:1.5; */
-    /* padding-bottom: 10px; */
-    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-top: 30px;
 }
 
 .fa-brands
@@ -98,11 +80,6 @@ body{
 .fa-facebook-f{
     background-color: blue;
 }
-.fa-twitter
-{
-    background-color: aqua;
-
-}
 .fa-google{
     background-color:red;
 }
@@ -110,7 +87,6 @@ body{
 {
     color:cyan;
 }
-
 .col
 {
     padding-bottom: 10px;
@@ -125,15 +101,16 @@ a {
     font-family: Poppins-Regular;
     font-size: 20px;
     line-height: 1.7;
-    color: #666666;
+    color:#fff;
+    height: 15px;
     margin: 0px;
     text-decoration: none;
     text-align: right;
 }
-
-.forgot-password:hover{
-    color:red;
+.a:hover{
+    color:black;
 }
+
 .submit
 {
     position: absolute;
@@ -141,11 +118,12 @@ a {
     width: 300%;
     height: 100%;
 }
-.login-btn
+.registration-btn
 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-top: 40px;
 }
 
 .form-btn
@@ -186,9 +164,7 @@ button {
     font-size: 18px;
     color:#fff
 }
-.button:hover{
-    color:black;
-}
+
 .social {
     display: flex;
     justify-content: center;
@@ -202,7 +178,8 @@ button {
     line-height: 1.5;
     color: #666666;
     text-align: center;
-    padding-top: 20px;
+    /* padding-bottom: 20px; */
+    padding-top: 35px;
 }
 .txb2
 {
@@ -215,11 +192,6 @@ button {
 .txb2:hover {
     color:red;
 }
-.login:hover{
-color:black;
+.registration:hover{
+    color:black;
 }
-p {
-    margin-top: 0px;
-    margin-bottom: 1rem;
-}
-
