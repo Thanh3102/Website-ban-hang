@@ -12,13 +12,13 @@ $(document).ready(function(){
     })
     
     $('#txtPassword').focusout(function(){
-        var  passwordRegex = /^[a-zA-Z0-9]{7,12}$/;
+        var  passwordRegex = /^[a-zA-Z0-9]{5,12}$/;
         if (passwordRegex.test($('#txtPassword').val())){
             $('#passwordError').text('Mật khẩu hợp lệ') 
             $('#passwordError').css('color','blue')
         }
         else{
-            $('#passwordError').text('Mật khẩu không hợp lệ. Độ dài từ 7-12.') 
+            $('#passwordError').text('Mật khẩu không hợp lệ. Độ dài từ 5-12.') 
             $('#passwordError').css('color','red')
         }
     })
