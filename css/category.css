@@ -188,6 +188,12 @@
         padding-top: 20px;
         padding-bottom: 20px;
     }
+    .pc-icon-commodity:hover .pc-table-category-out{display: block;}
+    .pc-table-category-out{background-color: var(--dark-blue);border-radius: 5px;padding: 10px;position: absolute;display: none;z-index: 9;right: 0;}
+    .pc-table-category-out td{padding: 10px;}
+    .pc-table-category-out a{text-decoration: none;color: var(--white);}
+    .pc-table-category-out td:hover{background-color: var(--blue);}
+    #nav-mobile-titleIcon-out, #nav-mobile-titleIcon-dx{color: var(--white);margin-right: 10px;}
 }
 @media only screen and (min-width:1056px){
     .app{font-size: 20px !important;}
@@ -221,6 +227,12 @@
     #myInput{font-size: 16px;flex: 1;margin-right: 5px;padding: 10px;}
     .myButton-add{padding: 10px;background-color: var(--button);color: var(--white);border-radius: 5px;border-style: none;}
     .fa-user{color: var(--blue);}
+    .pc-icon-commodity:hover .pc-table-category-out{display: block;}
+    .pc-table-category-out{background-color: var(--dark-blue);border-radius: 5px;padding: 10px;position: absolute;display: none;z-index: 9;right: 0;}
+    .pc-table-category-out td{padding: 10px;}
+    .pc-table-category-out a{text-decoration: none;color: var(--white);}
+    .pc-table-category-out td:hover{background-color: var(--blue);}
+    #nav-mobile-titleIcon-out, #nav-mobile-titleIcon-dx{color: var(--white);margin-right: 10px;}
 }
 @media only screen and (min-width:769px) and (max-width:1056px){
     .app{
@@ -256,4 +268,10 @@
     #myInput{font-size: 16px;flex: 1;margin-right: 5px;padding: 10px;}
     .myButton-add{padding: 10px;background-color: var(--button);color: var(--white);border-radius: 5px;border-style: none;}
     .fa-user{color: var(--blue);}
+    .pc-icon-commodity:hover .pc-table-category-out{display: block;}
+    .pc-table-category-out{background-color: var(--dark-blue);border-radius: 5px;padding: 10px;position: absolute;display: none;z-index: 9;right: 0;}
+    .pc-table-category-out td{padding: 10px;}
+    .pc-table-category-out a{text-decoration: none;color: var(--white);}
+    .pc-table-category-out td:hover{background-color: var(--blue);}
+    #nav-mobile-titleIcon-out, #nav-mobile-titleIcon-dx{color: var(--white);margin-right: 10px;}
 }
