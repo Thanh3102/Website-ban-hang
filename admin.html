@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <link rel="stylesheet" href="./css/admin.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="app">
+        <div class="header">
+
+            <ul class="header-list">
+
+                <li class="nav-mobile-app">
+                    <label class="nav-mobile-input-bars" for="nav-mobile-input"><i class="fa-solid fa-bars"></i></label>
+                    <input type="checkbox" id="nav-mobile-input" class="nav-input">
+                    <label for="nav-mobile-input" class="nav-overlay"></label>
+
+                    <div class="nav-mobile">
+
+                        <label for="nav-mobile-input" class="nav-mobile-close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </label>
+                        
+                        <ul class="nav-mobile-list">
+    
+                            <li class="nav-mobile-title">
+
+                                <a class="nav-mabile-titleLink" href="">
+                                    <i id="nav-mobile-titleIcon" class="fa-solid fa-eye"></i> Tổng quan
+                                </a>
+
+                            </li>
+    
+                            <li class="nav-mobile-title">
+
+                                <a class="nav-mabile-titleLink" href="">
+                                    <i id="nav-mobile-titleIcon" class="fa-solid fa-cube"></i> Hàng hóa 
+                                </a>
+    
+                                <ul class="nav-mobile-list-title">
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="category.html">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-table-cells"></i> Danh mục
+                                        </a>
+                                    </li>
+                                        
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-tag"></i> Thiết lập giá
+                                        </a>
+                                    </li>
+                                        
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-clipboard-check"></i> Kiểm kho
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li class="nav-mobile-title">
+                                <a class="nav-mabile-titleLink" href="">
+                                    <i id="nav-mobile-titleIcon" class="fa-solid fa-arrow-right-arrow-left"></i> Giao dịch
+                                </a>
+    
+                                <ul class="nav-mobile-list-title">
+    
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a href="" class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-inbox"></i> Đặt hàng
+                                        </a>
+                                    </li>
+    
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-file-invoice-dollar"></i> Hóa đơn
+                                        </a>
+                                    </li>
+    
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-file-pen"></i> Vận đơn
+                                        </a>
+                                    </li>
+    
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-reply-all"></i> Trả hàng
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-cart-flatbed"></i> Nhập hàng
+                                        </a>
+                                    </li>
+    
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-inbox"></i> Trả nhập hàng
+                                        </a>
+                                    </li>
+    
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-hand-holding-dollar"></i> Xuất hủy
+                                        </a>
+                                    </li>
+    
+                                </ul>
+                            </li>
+    
+                            <li class="nav-mobile-title">
+                                <a class="nav-mabile-titleLink" href="">
+                                    <i id="nav-mobile-titleIcon" class="fa-solid fa-user-tie"></i> Đối tác
+                                </a>
+    
+                                <ul class="nav-mobile-list-title">
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-user-large"></i> Khách hàng
+                                        </a>
+                                    </li>
+    
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-users"></i> Nhà cung cấp
+                                        </a>
+                                    </li>
+    
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-people-carry-box"></i> Đối tác giao hàng
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li class="nav-mobile-title">
+                                <a class="nav-mabile-titleLink" href="">
+                                    <i id="nav-mobile-titleIcon" class="fa-solid fa-user-group"></i> Nhân viên
+                                </a>
+    
+                                <ul class="nav-mobile-list-title">
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-user-group"></i> Nhân viên
+                                        </a>
+                                    </li>
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-calendar-days"></i> Chấm công
+                                        </a>
+                                    </li>
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-coins"></i> Bảng tính lương
+                                        </a>
+                                    </li>
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-sack-dollar"></i> Thiết lập hoa hồng
+                                        </a>
+                                    </li>
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-gear"></i> Thiết lập chung
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li class="nav-mobile-title">
+                                <a class="nav-mabile-titleLink" href="">
+                                    <i id="nav-mobile-titleIcon" class="fa-solid fa-dollar-sign"></i> Sổ quỹ
+                                </a>
+                            </li>
+    
+                            <li class="nav-mobile-title">
+                                <a class="nav-mabile-titleLink" href="">
+                                    <i id="nav-mobile-titleIcon" class="fa-solid fa-chart-line"></i> Báo cáo
+                                </a>
+    
+                                <ul class="nav-mobile-list-title">
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-chart-pie"></i> Cuối ngày
+                                        </a>
+                                    </li>
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-paste"></i> Bán hàng
+                                        </a>
+                                    </li>
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-inbox"></i> Đặt hàng
+                                        </a>
+                                    </li>
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-cube"></i> Hàng hóa
+                                        </a>
+                                    </li>
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-user-large"></i> Khách hàng
+                                        </a>
+                                    </li>
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-users"></i> Nhà cung cấp
+                                        </a>
+                                    </li>
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-id-badge"></i> NHân viên
+                                        </a>
+                                    </li>
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-brands fa-slideshare"></i> Kênh bán hàng
+                                        </a>
+                                    </li>
+                                    <li class="nav-mobile-list-titleIcon">
+                                        <a class="nav-mabile-titleLink" href="">
+                                            <i id="nav-mobile-titleIcon" class="fa-solid fa-chart-line"></i> Tài chính
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li class="nav-mobile-title">
+                                <a class="nav-mabile-titleLink" href="">
+                                    <i id="nav-mobile-titleIcon" class="fa-solid fa-store"></i> Bán hàng
+                                </a>
+                            </li>
+    
+                        </ul>
+    
+                    </div>
+                </li>
+
+                <li>
+
+                    <img class="logo" src="https://www.coolmate.me/images/logo-coolmate.svg" alt="">
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                </li>
+
+            </ul>
+
+            <div class="pc-header-bottom">
+                <ul class="pc-bottom-list-icon">
+                    <li><a class="pc-link-icon" style="background-color: var(--dark-blue);" href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-eye"></i> Tổng quan</a></li>
+                    <li class="pc-icon-commodity">
+                        <a class="pc-link-icon" href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-cube"></i> Hàng hóa</a>
+                        <table class="pc-table-category">
+                            <tr><td><a href="category.html""><i id="nav-mobile-titleIcon" class="fa-solid fa-table-cells"></i> Danh mục</a></td></tr>
+                            <tr><td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-tag"></i> Thiết lập giá</a></td></tr>
+                            <tr><td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-clipboard-check"></i> Kiểm kho</a></td></tr>
+                        </table>
+                    </li>
+                    <li class="pc-icon-commodity">
+                        <a class="pc-link-icon" href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-arrow-right-arrow-left"></i> Giao dịch</a>
+                        <table class="pc-table-category">
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-inbox"></i> Đặt hàng</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-file-invoice-dollar"></i> Hóa đơn</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-file-pen"></i> Vận đơn</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-reply-all"></i> Trả hàng</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-cart-flatbed"></i> Nhập hàng</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-inbox"></i> Trả hàng nhập</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-hand-holding-dollar"></i> Xuất hủy</a></td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="pc-icon-commodity">
+                        <a class="pc-link-icon" href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-user-tie"></i> Đối tác</a>
+                        <table class="pc-table-category">
+                            <tr><td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-user-large"></i> Khách hàng</a></td></tr>
+                            <tr><td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-users"></i> Nhà cung cấp</a></td></tr>
+                            <tr><td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-people-carry-box"></i> Đối tác giao hàng</a></td></tr>
+                        </table>
+                    </li>
+                    <li class="pc-icon-commodity">
+                        <a class="pc-link-icon" href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-user-group"></i> Nhân viên</a>
+                        <table class="pc-table-category">
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-inbox"></i> Nhân viên</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-file-invoice-dollar"></i> Chấm công</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-file-pen"></i> Bảng tính lương</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-reply-all"></i> Thiết lập hoa hồng</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-cart-flatbed"></i> Thiết lập chung</a></td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li><a class="pc-link-icon" href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-dollar-sign"></i> Sổ quỹ</a></li>
+                    <li class="pc-icon-commodity">
+                        <a class="pc-link-icon" href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-chart-line"></i> Báo cáo</a>
+                        <table class="pc-table-category">
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-chart-pie"></i> Cuối ngày</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-paste"></i> Bán hàng</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-inbox"></i> Đặt hàng</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-cube"></i> Hàng hóa</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-user-large"></i> Khách hàng</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-users"></i> Nhà cung cấp</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-id-badge"></i> Nhân viên</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-brands fa-slideshare"></i> Kênh bán hàng</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-chart-line"></i> Tài chính</a></td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li><a class="pc-link-icon" href=""><i id="nav-mobile-titleIcon" class="fa-solid fa-paste"></i> Bán hàng</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="pc-container">
+            <div class="pc-container-left">
+                <div class="middle">
+                    <div><b>KẾT QUẢ BÁN HÀNG HÔM NAY</b></div>
+                    <ul class="middle-list">
+                        <li class="middle-list-contact">
+        
+                            <i id="middle-contact-icon01" class="fa-solid fa-circle-dollar-to-slot"></i>
+        
+                            <div class="middle-contact-box">
+        
+                                <label for=""><b>0 Hóa đơn</b></label><br><br>
+                                <span><b>0</b></span><br><br>
+                                <span class="middle-contact-box-tick">Doanh thu</span>
+        
+                            </div>
+                            
+                        </li>
+        
+                        <li class="middle-list-contact">
+        
+                            <i id="middle-contact-icon02" class="fa-solid fa-circle-arrow-up"></i>
+        
+                            <div class="middle-contact-box">
+        
+                                <label for=""><b>0 Phiếu</b></label><br><br>
+                                <span><b class="middle-contact-box-bold-orange">0</b></span><br><br>
+                                <span class="middle-contact-box-tick">Trả hàng</span>
+        
+                            </div>
+                            
+                        </li>
+        
+                        <li class="middle-list-contact">
+        
+                            <i id="middle-contact-icon" class="fa-solid fa-circle-arrow-down"></i>
+        `   
+                            <div class="middle-contact-box">
+        
+                                <span><b class="middle-contact-box-red">-39.07%</b></span><br><br><br><br>
+                                <span class="middle-contact-box-tick">So với cùng kỳ tháng trước</span>
+        
+                            </div>
+        
+                        </li>
+                    </ul>
+        
+                </div>
+        
+                <div>
+        
+                    <div class="line-chart">
+        
+                        <div id="chartContainer"></div>
+                    
+                    </div>
+        
+                    <div class="line-chart">
+                        
+                        <div id="chartContainerShirt"></div>
+                    
+                    </div>
+        
+                </div>
+            </div>
+
+            <div class="bottom-recentActivity">
+                <div class="container-right-title">
+                    <b>CÁC HOẠT ĐỘNG GẦN ĐÂY</b>
+                </div>
+    
+                <ul class="bottom-list-recentActivity">
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i  class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+    
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                    <li class="bottom-contact-recentActivity">
+                        <span class="bottom-people-recentActivity">
+                            <i class="fa-solid fa-circle-up" id="people-icon"></i>
+                            <a class="people-name" href="">Lê Thị Bảo Trân</a>
+                            <span>vừa</span>
+                            <a class="people-name" href="">bán đơn hàng</a>
+                            <span>với giá trị 
+                                <span>14,298,000</span>
+                            </span><br>
+                            <span class="people-time-activity">2 ngày trước</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./js/admin.js"></script>
+</body>
+</html>
