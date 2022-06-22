@@ -13,7 +13,7 @@ $(document).ready(function(){
         }
     })
     $('#txtPassword').focusout(function(){
-        var  passwordRegex = /^[a-zA-Z0-9]{7,12}$/;
+        var  passwordRegex = /^[a-zA-Z0-9]{5,12}$/;
         if (passwordRegex.test($('#txtPassword').val()))
         {
             $('#passwordError').text('Mật khẩu hợp lệ') 
@@ -21,8 +21,13 @@ $(document).ready(function(){
         }
         else
         {
-            $('#passwordError').text('Mật khẩu không hợp lệ. Độ dài từ 7-12.') 
+            $('#passwordError').text('Mật khẩu không hợp lệ. Độ dài từ 5-12.') 
             $('#passwordError').css('color','red')
+        }
+    })
+    $('#btnCheck').click(function(){
+        if ($('#txtUserID').val() == 'admin' && $('#txtPassword').val() == 'admin'){
+            window.open('http://127.0.0.1:5500/admin.html', "_self")
         }
     })
 })
