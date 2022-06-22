@@ -70,7 +70,7 @@
                                         <td><i class="fa-solid fa-fingerprint" style="color: blue;"></i></td>
                                         <td><a href=""> Coolmate chấm công vân tay</a></td>
                                     </tr>
-                                </table class="table-header">
+                                </table>
                             </div>
                         </li>
                         <li class="header-top-right-icon"><a href=""><i class="fa-solid fa-envelope"></i></a></li>
@@ -129,8 +129,8 @@
                         <div class="header-bottom-right-icon-cube">
                             <table class="table-header">
                                 <tr class="table-tr-header">
-                                    <td><i class="fa-solid fa-table-cells"></i></td>
-                                    <td><a href=""> Danh mục</a></td>
+                                    <td><i class="fa-solid fa-table-cells"></i></td>    
+                                    <td><a href="./systeamDirectiry.html"> Danh mục</a></td>
                                 </tr>
                                 <tr class="table-tr-header">
                                     <td><i class="fa-solid fa-tag"></i></td>
@@ -148,7 +148,7 @@
                             <table class="table-header">
                                 <tr class="table-tr-header">
                                     <td><i class="fa-solid fa-inbox"></i></td>
-                                    <td><a href="./systemOder.html"> Đặt hàng</a></td>
+                                    <td><a href=""> Đặt hàng</a></td>
                                 </tr>
                                 <tr class="table-tr-header">
                                     <td><i class="fa-solid fa-file-invoice-dollar"></i></td>
@@ -267,247 +267,145 @@
                 </ul>
             </div>
         </div>
-
         <div class="container">
-            <div class="container-left-commodity">
-                <h1>Hàng hóa</h1>
-                <div class="container-left-commodity-option">
-                    <h3>Loại hàng</h3>
-                    <form action="">
-                        <input type="checkbox"><label for="">Hàng hóa</label><br>
-                        <input type="checkbox"><label for="">Dịch vụ</label><br>
-                        <input type="checkbox"><label for="">Combo - Đóng gói</label>
+            <div class="container-left-order">
+                <h1>Phiếu đặt hàng</h1>
+                <div class="container-left-order-time">
+                    <h3>Thời gian</h3>
+                    <div>
+                        <input type="radio"><input type="number" placeholder="Tháng này" min="1" max="12"><br>
+                        <input type="radio"><input type="datetime-local" name="" id="">
+                    </div>
+                </div>
+                <div class="container-left-status">
+                    <h3 class="left-title-status">Trạng thái</h3>
+                    <form action="#">
+                        <input type="checkbox"><label for="">Phiếu tạm</label><br>
+                        <input type="checkbox"><label for="">Đã xác nhận</label><br>
+                        <input type="checkbox"><label for="">Đang giao hàng</label><br>
+                        <input type="checkbox"><label for="">Hoàn thành</label><br>
+                        <input type="checkbox"><label for="">Đã huỷ</label>
                     </form>
                 </div>
-
-                <div class="container-left-groupOfGoods">
-
-                    <h3>Nhóm hàng</h3>
-
-                    <input type="search" placeholder="Tìm kiếm nhóm hàng">
-
-                    <div class="container-left-groupOfGoods-span">
-                        <span><b>Tất cả</b></span><br><br>
-                        <span>Thời trang nam</span><br><br>
-                        <span>Thời trang nữ</span><br><br>
-                        <span>Phụ kiện nam</span><br><br>
-                        <span>Phụ kiện nữ</span>
-                    </div>
-
+                <div class="container-left-creator">
+                    <h3>Người tạo</h3>
+                    <input type="search" placeholder="Chọn người tạo">
                 </div>
-
-                <div class="container-left-inventory">
-                    <h3>Tồn kho</h3>
-                    <div>
-                        <input type="radio"><label for="">Tất cả</label><br>
-                        <input type="radio"><label for="">Dưới định mức tồn</label><br>
-                        <input type="radio"><label for="">Vượt định mức tồn</label><br>
-                        <input type="radio"><label for="">Còn hàng trong kho</label><br>
-                        <input type="radio"><label for="">Hết hàng trong kho</label>
-                    </div>
+                <div class="container-left-accepter">
+                    <h3>Người nhận đặt</h3>
+                    <input type="search" placeholder="Chọn người nhận đặt">
                 </div>
-
-                <div class="container-left-sellOffline">
-                    <h3>Bán trực tiếp</h3>
-                    <div>
-                        <input type="radio"><label for="">Tất cả</label><br>
-                        <input type="radio"><label for="">Được bán trực tiếp</label><br>
-                        <input type="radio"><label for="">Không được bán trực tiếp</label><br>
-                    </div>
+                <div class="container-left-chanel">
+                    <h3>Kênh bán</h3>
+                    <input type="search" placeholder="Chọn kênh bán">
                 </div>
-
-                <div class="container-left-deadline">
-                    <h3>Ngày dự kiến hết hàng</h3>
+                <div class="container-left-partner">
+                    <h3>Đối tác giao hàng</h3>
+                    <input type="search" placeholder="Chọn đối tác giao hàng">
+                </div>
+                <div class="container-left-order-timeDelivery">
+                    <h3>Thời gian giao hàng</h3>
                     <div>
                         <input type="radio"><input type="number" placeholder="Toàn thời gian"><br>
                         <input type="radio"><input type="datetime-local" name="" id="">
                     </div>
                 </div>
-
-                <div class="container-left-supplier">
-                    <h3>Nhà cung cấp</h3>
-                    <div>
-                        <input type="search" placeholder="Chọn nhà cung cấp"><br>
-                    </div>
+                <div class="container-left-deliveryArea">
+                    <h3>Khu vực giao hàng</h3>
+                    <input type="search" placeholder="Nhập Tỉnh/TP - Quận/Huyện">
                 </div>
-
-                <div class="container-left-location">
-                    <h3>Vị trí</h3>
-                    <div>
-                        <input type="search" placeholder="Chọn vị trí"><br>
-                    </div>
+                <div class="container-left-payment">
+                    <h3>Phương thức</h3>
+                    <input type="search" placeholder="Chọn phương thức thanh toán">
                 </div>
-
-                <div class="container-left-saleLink">
-                    <h3>Bán trực tiếp</h3>
-                    <div>
-                        <input type="radio"><label for="">Tất cả</label><br>
-                        <input type="radio"><label for="">Có liên kết kênh bán</label><br>
-                        <input type="radio"><label for="">Không liên kết kênh bán</label><br>
-                    </div>
-                </div>
-
-                <div class="container-left-displaySelection">
-                    <h3>Bán trực tiếp</h3>
-                    <div>
-                        <input type="radio"><label for="">Tất cả</label><br>
-                        <input type="radio"><label for="">Hàng đang kinh doanh</label><br>
-                        <input type="radio"><label for="">Hàng ngừng kinh doanh</label><br>
-                    </div>
-                </div>
-
             </div>
+            <div class="container-right-order">
 
-            <div class="container-right-commodity">
+                <div class="container-left-order-header">
 
-                <div class="container-left-commodity-header">
-
-                    <div class="container-right-commodity-search">
-                        <input type="text" id="myInput" onkeyup="myFunctionFind()" placeholder="&#xF002;Theo mã, tên hàng" style="font-family:Arial, FontAwesome">
+                    <div class="container-right-order-search">
+                        <input type="text" name="" id="inputOder" onkeyup="myFunctionFindOder();" placeholder="&#xF002; Theo mã  phiếu đặt" style="font-family:Arial, FontAwesome">
                     </div>
 
                     <div>
                         <ul>
                             <li>
-                                <button type="button" type="button" onclick="MyFuncitionOn()"><i class="fa-solid fa-circle-plus" style="color: white;"></i> Thêm mới</button>
+                                <button><i class="fa-solid fa-plus" style="color: white;"></i> Đặt hàng</button>
                             </li>
                             <li>
-                                <button><i class="fa-solid fa-file-import" style="color: white;"></i> Import</button>
+                                <button><i class="fa-solid fa-copy" style="color: white;"></i> Gộp phiếu</button>
                             </li>
                             <li>
-                                <button><i class="fa-solid fa-file-export" style="color: white;"></i> Xuất file</button>
+                                <button><i class="fa-solid fa-file" style="color: white;"></i>File</button>
+                            </li>
+                            <li>
+                                <button><i class="fa-solid fa-grip-lines"></i></button>
                             </li>
                         </ul>
                     </div>
 
                 </div>
 
-                <div class="container-right-commodity-list">
+                <div class="container-left-order-list">
 
-                    <div id="form-group">
-            
-                        <table id="example">
-            
-                            <tr>
-                                <td>
-                                    <label for="">Nhập tên hàng</label>
-                                    
-                                </td>
-            
-                                <td>
-                                    <input type="text" id="nhapHang" style="float: 1;">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="">Nhập giá bán</label>
-                                    
-                                </td>
-                                <td>
-                                    <input type="number" name="" id="giaBan">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="">Nhập giá vốn</label>
-                                    
-                                </td>
-                                <td>
-                                    <input type="number" id="giaVon">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="">Nhập tồn kho</label>
-                                    
-                                </td>
-                                <td>
-                                    <input type="text" id="tonKho">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="">Nhập khách đặt</label>
-                                    
-                                </td>
-            
-                                <td><input type="number" id="khacDat"></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="">Dự kiến hết hàng</label>
-                                    
-                                </td>
-                                <td>
-                                    <input type="number" id="hetKhac">
-                                </td>
-                            </tr>
-            
-                        </table>
-            
-                        <button type="button" class="submit" onclick="MyFuncitionOff()" style="margin-right: 20px; float: right;">Xác nhận</button>
-            
-                    </div>
-
-                    <table id="myTable">
+                    <table id = "myTable">
                         <tr>
-                            <th>Mã hàng</th>
-                            <th>Tên hàng</th>
-                            <th>Giá bán</th>
-                            <th>Gián vốn</th>
-                            <th>Tồn kho</th>
-                            <th>Khách đặt</th>
-                            <th>Dự kiến hết hàng</th>
+                            <th>Mã đặt hàng</th>
+                            <th>Thời gian</th>
+                            <th>Khách hàng</th>
+                            <th>Khách cần trả</th>
+                            <th>Khách đã trả</th>
+                            <th>Trả lại khách</th>
+                            <th>Trạng thái</th>
                         </tr>
 
                         <tr>
                             <td>NU1</td>
-                            <td>Thắt lưng nữ màu vàng</td>
+                            <td>01/06/2022</td>
+                            <td>Lê Thị Bảo Trân</td>
                             <td>4300000</td>
-                            <td>1920000</td>
-                            <td>6</td>
-                            <td>0</td>
-                            <td>1 ngày</td>
+                            <td>5000000</td>
+                            <td>700000</td>
+                            <td>Hoàn thành</td>
                         </tr>
 
                         <tr>
                             <td>NU2</td>
-                            <td>Giày nữ màu kem</td>
+                            <td>10/06/2022</td>
+                            <td>Đặng Mạnh Dũng</td>
                             <td>2300000</td>
-                            <td>1820000</td>
-                            <td>7</td>
-                            <td>5</td>
-                            <td>2 ngày</td>
+                            <td>2500000</td>
+                            <td>200000</td>
+                            <td>Hoàn thành</td>
                         </tr>
                         <tr>
                             <td>NU3</td>
-                            <td>Túi xách nữ màu xanh dương</td>
+                            <td>15/06/2022</td>
+                            <td>Trần Văn Đạt</td>
                             <td>4500000</td>
-                            <td>2920000</td>
-                            <td>4</td>
-                            <td>1</td>
-                            <td>3 ngày</td>
+                            <td>4500000</td>
+                            <td>0</td>
+                            <td>Hoàn thành</td>
                         </tr>
-
                         <tr>
                             <td>NU4</td>
-                            <td>Ví màu xanh lá cây</td>
+                            <td>20/06/2022</td>
+                            <td>Trần Văn Toản</td>
                             <td>6300000</td>
-                            <td>3920000</td>
-                            <td>3</td>
-                            <td>1</td>
-                            <td>4 ngày</td>
+                            <td>6500000</td>
+                            <td>200000</td>
+                            <td>Hoàn thành</td>
                         </tr>
-
                         <tr>
                             <td>NU5</td>
-                            <td>Áo vest nữ màu hồng</td>
+                            <td>25/06/2022</td>
+                            <td>Hà Trung Hậu</td>
                             <td>6300000</td>
-                            <td>1120000</td>
-                            <td>6</td>
-                            <td>2</td>
-                            <td>2 ngày</td>
+                            <td>10000000</td>
+                            <td>3700000</td>
+                            <td>Đang giao hàng</td>
                         </tr>
+                       
                     </table>
 
                 </div>
@@ -516,59 +414,15 @@
             </div>
         </div>
     </div>
-
     <script>
-        function MyFuncitionOn() {
-            document.getElementById('form-group').style.display = "block";      
-        }
-        var dem = 6;
-        function MyFuncitionOff(){
-            if( document.getElementById('nhapHang').value==!"" || document.getElementById('giaBan').value==!"" || document.getElementById('giaVon').value==!"" || document.getElementById('tonKho').value==!"" || document.getElementById('khacDat').value==!"" || document.getElementById('hetKhac').value==!""){
-                document.getElementById('form-group').style.display = "none";
-                var table = document.getElementById("myTable");
-                var count = table.rows.length;
-                var row = table.insertRow(count);
-                var cell1 = row.insertCell(0);
-                var cell2 = row.insertCell(1);
-                var cell3 = row.insertCell(2);
-                var cell4 = row.insertCell(3);
-                var cell5 = row.insertCell(4);
-                var cell6 = row.insertCell(5);
-                var cell7 = row.insertCell(6);
-                cell1.innerHTML = "NU" + dem.toString();
-                cell2.innerHTML = document.getElementById('nhapHang').value;
-                cell3.innerHTML = document.getElementById('giaBan').value;
-                cell4.innerHTML = document.getElementById('giaVon').value;
-                cell5.innerHTML = document.getElementById('tonKho').value;
-                cell6.innerHTML = document.getElementById('khacDat').value;
-                cell7.innerHTML = document.getElementById('hetKhac').value.toString() + " ngày";
-                reset();
-                dem++;
-            }
-            else
-            {
-                alert('Bạn hãy nhập đầy đủ thông tin');
-                return;
-            }
-        }
-
-        function reset(){
-            document.getElementById('nhapHang').value="";
-            document.getElementById('giaBan').value="";
-            document.getElementById('giaVon').value="";
-            document.getElementById('tonKho').value="";
-            document.getElementById('khacDat').value="";
-            document.getElementById('hetKhac').value="";
-        }
-
-        function myFunctionFind() {
+        function myFunctionFindOder() {
             var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("myInput");
+            input = document.getElementById("inputOder");
             filter = input.value.toUpperCase();
             table = document.getElementById("myTable");
             tr = table.getElementsByTagName("tr");
             for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[1];
+                td = tr[i].getElementsByTagName("td")[0];
                 if (td) {
                 txtValue = td.textContent || td.innerText;
                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -580,7 +434,6 @@
             }
         }
     </script>
-
-    <script src="./js/style.js"></script>
 </body>
 </html>
+    
